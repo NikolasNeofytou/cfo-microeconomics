@@ -1,84 +1,64 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 220">
-  <defs>
-    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#0c1220"/>
-      <stop offset="100%" style="stop-color:#1a1a2e"/>
-    </linearGradient>
-    <linearGradient id="spine" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" style="stop-color:#1e3a5f"/>
-      <stop offset="100%" style="stop-color:#2563eb"/>
-    </linearGradient>
-    <linearGradient id="cover" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#1e40af"/>
-      <stop offset="60%" style="stop-color:#1e3a8a"/>
-      <stop offset="100%" style="stop-color:#172554"/>
-    </linearGradient>
-  </defs>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 200">
+  <rect width="900" height="200" fill="#faf8f2"/>
   
-  <rect width="900" height="220" rx="12" fill="url(#bg)"/>
-
-  <!-- Book -->
-  <rect x="40" y="25" width="12" height="170" rx="2" fill="url(#spine)"/>
-  <rect x="52" y="25" width="120" height="170" rx="0 4 4 0" fill="url(#cover)"/>
-  <rect x="52" y="25" width="120" height="170" rx="0 4 4 0" fill="none" stroke="#3b82f6" stroke-width="0.5" opacity="0.4"/>
+  <!-- Top rule -->
+  <line x1="40" y1="20" x2="860" y2="20" stroke="#1a1a1a" stroke-width="1.5"/>
+  <line x1="40" y1="23" x2="860" y2="23" stroke="#1a1a1a" stroke-width="0.3"/>
   
-  <!-- Book cover details -->
-  <line x1="65" y1="55" x2="158" y2="55" stroke="#60a5fa" stroke-width="0.5" opacity="0.3"/>
-  <text x="112" y="78" text-anchor="middle" fill="#93c5fd" font-family="Georgia, serif" font-size="10" font-weight="700">PRINCIPLES OF</text>
-  <text x="112" y="95" text-anchor="middle" fill="#bfdbfe" font-family="Georgia, serif" font-size="13" font-weight="700">MICRO</text>
-  <text x="112" y="112" text-anchor="middle" fill="#bfdbfe" font-family="Georgia, serif" font-size="13" font-weight="700">ECONOMICS</text>
-  <line x1="65" y1="122" x2="158" y2="122" stroke="#60a5fa" stroke-width="0.5" opacity="0.3"/>
-  <text x="112" y="142" text-anchor="middle" fill="#60a5fa" font-family="system-ui, sans-serif" font-size="7.5">CASE · FAIR · OSTER</text>
+  <!-- Left column: book info -->
+  <text x="48" y="58" fill="#1a1a1a" font-family="Georgia, 'Times New Roman', serif" font-size="11" letter-spacing="3" font-weight="400">CASE · FAIR · OSTER</text>
+  <text x="48" y="92" fill="#1a1a1a" font-family="Georgia, 'Times New Roman', serif" font-size="30" font-weight="400" font-style="italic">Principles of Microeconomics</text>
+  <text x="48" y="118" fill="#6b6b6b" font-family="Georgia, 'Times New Roman', serif" font-size="13" font-style="italic">Study modules — Puzzle · Read · Model · Debate · Data</text>
   
-  <!-- Supply/demand curves on cover -->
-  <path d="M75,155 Q95,140 115,150 Q135,160 155,148" fill="none" stroke="#3b82f6" stroke-width="1" opacity="0.4"/>
-  <path d="M75,170 Q95,160 115,155 Q135,150 155,165" fill="none" stroke="#f59e0b" stroke-width="1" opacity="0.4"/>
+  <!-- Divider -->
+  <line x1="48" y1="132" x2="520" y2="132" stroke="#c4b99a" stroke-width="0.5"/>
   
-  <!-- Page edges -->
-  <line x1="172" y1="28" x2="172" y2="192" stroke="#334155" stroke-width="1"/>
-  <line x1="171" y1="29" x2="171" y2="191" stroke="#1e293b" stroke-width="1"/>
-  
-  <!-- Title text -->
-  <text x="210" y="65" fill="#e2e8f0" font-family="Georgia, serif" font-size="28" font-weight="700">Microeconomics</text>
-  <text x="210" y="95" fill="#94a3b8" font-family="Georgia, serif" font-size="16" font-style="italic">the way it should be taught</text>
-  
-  <line x1="210" y1="110" x2="380" y2="110" stroke="#334155" stroke-width="1"/>
-  
-  <text x="210" y="135" fill="#64748b" font-family="system-ui, sans-serif" font-size="12">Case, Fair &amp; Oster · Principles of Microeconomics</text>
-  <text x="210" y="158" fill="#475569" font-family="system-ui, sans-serif" font-size="11">Puzzle → Read → Model → Debate → Data</text>
-  
-  <!-- Phase icons -->
-  <g transform="translate(210, 172)">
-    <rect x="0" y="0" width="56" height="22" rx="4" fill="#312e81" stroke="#6366f1" stroke-width="0.8"/>
-    <text x="28" y="15" text-anchor="middle" fill="#a5b4fc" font-family="system-ui, sans-serif" font-size="9" font-weight="600">Puzzle</text>
-    
-    <rect x="64" y="0" width="56" height="22" rx="4" fill="#4c1d95" stroke="#8b5cf6" stroke-width="0.8"/>
-    <text x="92" y="15" text-anchor="middle" fill="#c4b5fd" font-family="system-ui, sans-serif" font-size="9" font-weight="600">Read</text>
-    
-    <rect x="128" y="0" width="56" height="22" rx="4" fill="#831843" stroke="#ec4899" stroke-width="0.8"/>
-    <text x="156" y="15" text-anchor="middle" fill="#f9a8d4" font-family="system-ui, sans-serif" font-size="9" font-weight="600">Model</text>
-    
-    <rect x="192" y="0" width="56" height="22" rx="4" fill="#78350f" stroke="#f59e0b" stroke-width="0.8"/>
-    <text x="220" y="15" text-anchor="middle" fill="#fcd34d" font-family="system-ui, sans-serif" font-size="9" font-weight="600">Debate</text>
-    
-    <rect x="256" y="0" width="56" height="22" rx="4" fill="#064e3b" stroke="#10b981" stroke-width="0.8"/>
-    <text x="284" y="15" text-anchor="middle" fill="#6ee7b7" font-family="system-ui, sans-serif" font-size="9" font-weight="600">Data</text>
+  <!-- Phase markers -->
+  <g font-family="Georgia, 'Times New Roman', serif" font-size="10" fill="#8a7e6b">
+    <text x="48" y="152">I</text>
+    <text x="62" y="152" font-style="italic" fill="#5a5347">The Puzzle</text>
+    <text x="148" y="152">II</text>
+    <text x="164" y="152" font-style="italic" fill="#5a5347">Read</text>
+    <text x="218" y="152">III</text>
+    <text x="238" y="152" font-style="italic" fill="#5a5347">Model</text>
+    <text x="308" y="152">IV</text>
+    <text x="326" y="152" font-style="italic" fill="#5a5347">Debate</text>
+    <text x="400" y="152">V</text>
+    <text x="414" y="152" font-style="italic" fill="#5a5347">Data Lab</text>
   </g>
-
-  <!-- Stats on the right -->
-  <g transform="translate(680, 45)">
-    <text x="0" y="0" fill="#475569" font-family="system-ui, sans-serif" font-size="10" letter-spacing="2">CHAPTERS</text>
-    <text x="0" y="25" fill="#e2e8f0" font-family="Georgia, serif" font-size="32" font-weight="700">7</text>
-    <text x="40" y="25" fill="#64748b" font-family="system-ui, sans-serif" font-size="12">planned</text>
+  
+  <!-- Right column: small supply/demand sketch -->
+  <g transform="translate(660, 42)">
+    <!-- Axes -->
+    <line x1="0" y1="95" x2="150" y2="95" stroke="#1a1a1a" stroke-width="0.6"/>
+    <line x1="0" y1="0" x2="0" y2="95" stroke="#1a1a1a" stroke-width="0.6"/>
     
-    <text x="0" y="55" fill="#475569" font-family="system-ui, sans-serif" font-size="10" letter-spacing="2">PHASES PER CH</text>
-    <text x="0" y="80" fill="#e2e8f0" font-family="Georgia, serif" font-size="32" font-weight="700">5</text>
+    <!-- Demand curve -->
+    <path d="M10,10 Q75,45 140,85" fill="none" stroke="#8b4513" stroke-width="1.2"/>
+    <text x="143" y="82" font-family="Georgia, serif" font-size="9" font-style="italic" fill="#8b4513">D</text>
     
-    <text x="0" y="110" fill="#475569" font-family="system-ui, sans-serif" font-size="10" letter-spacing="2">DATA SOURCES</text>
-    <text x="0" y="130" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="11">OECD · FRED · World Bank</text>
+    <!-- Supply curve -->
+    <path d="M10,85 Q75,55 140,15" fill="none" stroke="#2f4f4f" stroke-width="1.2"/>
+    <text x="143" y="18" font-family="Georgia, serif" font-size="9" font-style="italic" fill="#2f4f4f">S</text>
     
-    <text x="0" y="155" fill="#475569" font-family="system-ui, sans-serif" font-size="10" letter-spacing="2">COUNTRIES</text>
-    <text x="0" y="175" fill="#e2e8f0" font-family="Georgia, serif" font-size="24" font-weight="700">28</text>
-    <text x="35" y="175" fill="#64748b" font-family="system-ui, sans-serif" font-size="11">in dataset</text>
+    <!-- Equilibrium dot -->
+    <circle cx="75" cy="50" r="2.5" fill="#1a1a1a"/>
+    
+    <!-- Dashed lines to axes -->
+    <line x1="75" y1="50" x2="75" y2="95" stroke="#1a1a1a" stroke-width="0.4" stroke-dasharray="3 2"/>
+    <line x1="75" y1="50" x2="0" y2="50" stroke="#1a1a1a" stroke-width="0.4" stroke-dasharray="3 2"/>
+    
+    <!-- Labels -->
+    <text x="73" y="108" text-anchor="middle" font-family="Georgia, serif" font-size="8" font-style="italic" fill="#6b6b6b">Q*</text>
+    <text x="-8" y="53" text-anchor="end" font-family="Georgia, serif" font-size="8" font-style="italic" fill="#6b6b6b">P*</text>
+    <text x="75" y="-5" text-anchor="middle" font-family="Georgia, serif" font-size="8" fill="#6b6b6b">equilibrium</text>
   </g>
+  
+  <!-- Bottom rule -->
+  <line x1="40" y1="172" x2="860" y2="172" stroke="#1a1a1a" stroke-width="0.3"/>
+  <line x1="40" y1="175" x2="860" y2="175" stroke="#1a1a1a" stroke-width="1.5"/>
+  
+  <!-- Footer -->
+  <text x="48" y="192" fill="#8a7e6b" font-family="Georgia, 'Times New Roman', serif" font-size="9" letter-spacing="1">OECD · FRED · WORLD BANK DATA</text>
+  <text x="860" y="192" text-anchor="end" fill="#8a7e6b" font-family="Georgia, 'Times New Roman', serif" font-size="9" letter-spacing="1">28 COUNTRIES · 7 CHAPTERS</text>
 </svg>
