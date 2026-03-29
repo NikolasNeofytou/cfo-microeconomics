@@ -4,6 +4,10 @@
 
 This repo is an experiment in learning economics the way the best programs in the world do it — not through memorization, but through **puzzles, models, debate, and data**.
 
+<p align="center">
+  <img src="docs/pedagogy-flow.svg" alt="Pedagogy: Puzzle → Read → Model → Debate → Data" width="100%"/>
+</p>
+
 Each chapter of Case, Fair & Oster's *Principles of Microeconomics* becomes a 5-phase study module:
 
 **1. The Puzzle** — A real-world fact that doesn't make sense yet. Real data, real markets, real countries. *"Why did hand sanitizer prices spike 400% instantly while lumber took 4 months?"*
@@ -18,27 +22,51 @@ Each chapter of Case, Fair & Oster's *Principles of Microeconomics* becomes a 5-
 
 ---
 
-## Chapters
+## Chapter 1: Thinking Like an Economist
+
+### The Puzzle
+Asks: *"Your friend says the scholarship university is free. What does it actually cost?"* — then reveals EUR 21,200/year in real costs, with foregone earnings as the biggest line item.
+
+### The Model
+An interactive PPF explorer with draggable production point and 5 real-world scenario presets:
+
+<p align="center">
+  <img src="docs/ppf-preview.png" alt="Interactive PPF Explorer" width="600"/>
+</p>
+
+> *Drag the blue point along the frontier. Watch marginal opportunity cost rise as you produce more food — the best tech workers are being pulled into farming. Switch to "COVID-19 Pandemic" and watch the frontier contract. Switch to "After Investment" and watch it expand. That's economic growth.*
+
+### The Data Lab
+Tests the PPF model against real OECD data for 28 countries:
+
+<p align="center">
+  <img src="docs/plot2_tertiary_vs_gdp.png" alt="Education Attainment vs GDP" width="600"/>
+</p>
+
+Education *attainment* correlates with GDP per capita — but education *spending* barely does. It's not how much you invest, but what you get for it.
+
+<p align="center">
+  <img src="docs/plot3_education_vs_rd.png" alt="Education vs R&D Investment" width="600"/>
+</p>
+
+The richest countries invest heavily in *both* education and R&D. Cyprus spends 5.5% of GDP on education but only 0.9% on R&D — lowest among its peers.
+
+### The Debate
+*"Should Cyprus make university education free?"* — argue FOR using opportunity cost (foregone human capital), then argue AGAINST using the same framework (foregone healthcare, infrastructure). No right answer. Just rigorous thinking.
+
+---
+
+## All Chapters
 
 | | Module | Core Model | Highlights |
 |---|---|---|---|
-| **Ch 1** | [Thinking Like an Economist](ch1-thinking-like-an-economist/) | Opportunity cost, PPF | Interactive PPF explorer with COVID/wartime/investment scenarios · Policy debate on free education · OECD data analysis across 28 countries with Cyprus focus |
+| **Ch 1** | [Thinking Like an Economist](ch1-thinking-like-an-economist/) | Opportunity cost, PPF | Interactive PPF · OECD data lab · Policy debate |
 | **Ch 3** | Supply and Demand | Equilibrium, shifts | *Coming next* |
 | **Ch 5** | Elasticity | Price elasticity | — |
 | **Ch 6-7** | Consumer Behavior | Utility maximization | — |
 | **Ch 8-9** | Costs & Competition | Profit maximization | — |
 | **Ch 12** | Monopoly | Market power, DWL | — |
 | **Ch 14** | Externalities | Market failure | — |
-
-## Chapter 1 Preview
-
-**The Puzzle** asks you to identify every security threat in a small web application — then reveals a systematic CIA-based analysis that found 24 threats across 8 assets. Most people catch fewer than half.
-
-**The Model** is a draggable PPF with 5 scenario presets (baseline, COVID, tech boom, wartime, post-investment). As you drag along the frontier, the marginal opportunity cost updates in real time — you can *feel* increasing returns.
-
-**The Debate** asks: should Cyprus make university education free? You argue FOR using opportunity cost (foregone human capital) and AGAINST using the same framework (foregone healthcare, infrastructure). Then you write a policy recommendation.
-
-**The Data Lab** loads real OECD data for 28 countries and tests whether education spending actually shifts the PPF outward. The finding: education *attainment* correlates with GDP (r ≈ 0.7), but education *spending* barely does (r ≈ 0.15). It's not how much you spend — it's what you get for it. Cyprus spends 5.5% of GDP on education but only 0.9% on R&D — lowest among its peers.
 
 ## Running It
 
@@ -47,9 +75,9 @@ cd ch1-thinking-like-an-economist
 pip install pandas matplotlib numpy
 
 python puzzle.py          # Phase 1: before reading
-# Read Chapter 1 with reading_guide.md    # Phase 2
-# Open model.jsx in Claude                # Phase 3
-# Complete debate.md                       # Phase 4
+# Read Chapter 1 with reading_guide.md
+# Open model.jsx in Claude for interactive PPF
+# Complete debate.md — argue both sides
 python data_lab.py        # Phase 5: after reading
 ```
 
@@ -59,10 +87,8 @@ Most economics courses teach models as facts. The best ones teach models as *len
 
 ## Part of a Larger System
 
-This is one of three textbook repos using domain-specific learning pedagogies:
-
 | Repo | Domain | Method |
 |---|---|---|
 | **This repo** | Economics | Puzzle → Read → Model → Debate → Data |
-| [stallings-security](https://github.com/USERNAME/stallings-security) | Computer Security | Feel the attack → Read → Build the defense (test suite) |
-| [clrs-algorithms](https://github.com/USERNAME/clrs-algorithms) | Algorithms | Feel the slowness → Read → Build and benchmark |
+| [stallings-security](https://github.com/NikolasNeofytou/stallings-security) | Computer Security | Feel the attack → Read → Build the defense |
+| [clrs-algorithms](https://github.com/NikolasNeofytou/clrs-algorithms) | Algorithms | Feel the slowness → Read → Build and benchmark |

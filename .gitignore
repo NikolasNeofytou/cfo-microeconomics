@@ -4,5 +4,8 @@ __pycache__/
 venv/
 .env
 *.log
-*.png
 .pytest_cache/
+
+# Exclude generated plots from chapter dirs, but keep docs/
+ch*/*.png
+!docs/*.png
