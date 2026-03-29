@@ -1,4 +1,6 @@
-# Microeconomics, the Way It Should Be Taught
+<p align="center">
+  <img src="docs/header.svg" alt="Microeconomics — Case, Fair & Oster" width="100%"/>
+</p>
 
 > "Free" university costs EUR 21,200 per year. Instagram costs 182 hours of your life annually. Every government budget is a production possibilities frontier someone chose a point on. — *Chapter 1*
 
