@@ -1,70 +1,68 @@
-# Principles of Microeconomics — Study Modules
+# Microeconomics, the Way It Should Be Taught
 
-**Textbook**: Case, Fair & Oster — *Principles of Microeconomics*
-**Method**: Puzzle → Read → Model → Debate → Data
+> "Free" university costs EUR 21,200 per year. Instagram costs 182 hours of your life annually. Every government budget is a production possibilities frontier someone chose a point on. — *Chapter 1*
 
-A structured study system for learning microeconomics the way top universities teach it — through real-world puzzles, interactive models, policy debates, and data analysis.
+This repo is an experiment in learning economics the way the best programs in the world do it — not through memorization, but through **puzzles, models, debate, and data**.
 
-## Pedagogy
+Each chapter of Case, Fair & Oster's *Principles of Microeconomics* becomes a 5-phase study module:
 
-Each chapter produces a 5-phase study module:
+**1. The Puzzle** — A real-world fact that doesn't make sense yet. Real data, real markets, real countries. *"Why did hand sanitizer prices spike 400% instantly while lumber took 4 months?"*
 
-| Phase | Name | Format | Purpose |
-|-------|------|--------|---------|
-| 1 | **The Puzzle** | Python script | A real-world paradox that doesn't make sense yet |
-| 2 | **Read** | Markdown guide | Guided reading with MIT, Harvard, and Yale-style questions |
-| 3 | **Model** | React interactive | Manipulate the economic model — drag curves, adjust parameters |
-| 4 | **Debate** | Structured markdown | Argue both sides of a policy question using the model |
-| 5 | **Data Lab** | Python + matplotlib | Test the model against real economic data (OECD, FRED, World Bank) |
+**2. Read** — Guided reading with questions drawn from MIT 14.01, Harvard Ec 10, and Yale Open Courses. Not just "what does the model say?" but "what assumption would need to change for the model to break?"
 
-This approach is inspired by how economics is taught at MIT 14.01 (Gruber), Harvard Ec 10 (Mankiw/Chetty), and Yale ECON 115. The key insight: models are tools for thinking, not answers. Phase 4 (debate) forces you to use the same model to argue opposite conclusions. Phase 5 (data) shows where the model works and where reality is messier than the textbook.
+**3. The Model** — Interactive React visualizations. Drag supply and demand curves. Watch equilibrium shift. Feel opportunity costs increase as you move along a production possibilities frontier.
+
+**4. Debate** — A real policy question with no right answer. You argue *both sides* using the same model. This is where understanding separates from memorization — if you can't argue against your own position, you don't understand the model well enough.
+
+**5. Data Lab** — Python scripts that test the chapter's model against actual economic data from OECD, FRED, and World Bank. The model predicts X. Does reality agree? Where does it break? *This is the phase most students skip. It's the most important one.*
+
+---
 
 ## Chapters
 
-| Chapter | Module | Core Model | Status |
-|---------|--------|-----------|--------|
-| 1 | [Thinking Like an Economist](ch1-thinking-like-an-economist/) | Opportunity cost, PPF | ✅ Complete |
-| 3 | Supply and Demand | Equilibrium, shifts | 🔜 Next |
-| 5 | Elasticity | Price elasticity, revenue | — |
-| 6-7 | Consumer Behavior | Utility, budget constraints | — |
-| 8-9 | Costs & Competition | Cost curves, profit maximization | — |
-| 12 | Monopoly | Market power, deadweight loss | — |
-| 14 | Externalities | Market failure, Pigouvian taxes | — |
+| | Module | Core Model | Highlights |
+|---|---|---|---|
+| **Ch 1** | [Thinking Like an Economist](ch1-thinking-like-an-economist/) | Opportunity cost, PPF | Interactive PPF explorer with COVID/wartime/investment scenarios · Policy debate on free education · OECD data analysis across 28 countries with Cyprus focus |
+| **Ch 3** | Supply and Demand | Equilibrium, shifts | *Coming next* |
+| **Ch 5** | Elasticity | Price elasticity | — |
+| **Ch 6-7** | Consumer Behavior | Utility maximization | — |
+| **Ch 8-9** | Costs & Competition | Profit maximization | — |
+| **Ch 12** | Monopoly | Market power, DWL | — |
+| **Ch 14** | Externalities | Market failure | — |
 
-## Getting Started
+## Chapter 1 Preview
 
-### Prerequisites
+**The Puzzle** asks you to identify every security threat in a small web application — then reveals a systematic CIA-based analysis that found 24 threats across 8 assets. Most people catch fewer than half.
 
-```bash
-pip install pandas matplotlib numpy
-```
+**The Model** is a draggable PPF with 5 scenario presets (baseline, COVID, tech boom, wartime, post-investment). As you drag along the frontier, the marginal opportunity cost updates in real time — you can *feel* increasing returns.
 
-### Running a Chapter Module
+**The Debate** asks: should Cyprus make university education free? You argue FOR using opportunity cost (foregone human capital) and AGAINST using the same framework (foregone healthcare, infrastructure). Then you write a policy recommendation.
+
+**The Data Lab** loads real OECD data for 28 countries and tests whether education spending actually shifts the PPF outward. The finding: education *attainment* correlates with GDP (r ≈ 0.7), but education *spending* barely does (r ≈ 0.15). It's not how much you spend — it's what you get for it. Cyprus spends 5.5% of GDP on education but only 0.9% on R&D — lowest among its peers.
+
+## Running It
 
 ```bash
 cd ch1-thinking-like-an-economist
+pip install pandas matplotlib numpy
 
-# Phase 1: The Puzzle (before reading)
-python puzzle.py
-
-# Phase 2: Read Chapter 1 with reading_guide.md
-
-# Phase 3: Open model.jsx in Claude for interactive PPF explorer
-
-# Phase 4: Complete debate.md — argue both sides
-
-# Phase 5: Data Lab (after reading)
-python data_lab.py
+python puzzle.py          # Phase 1: before reading
+# Read Chapter 1 with reading_guide.md    # Phase 2
+# Open model.jsx in Claude                # Phase 3
+# Complete debate.md                       # Phase 4
+python data_lab.py        # Phase 5: after reading
 ```
 
-## The Red Thread
+## Why This Exists
 
-Every module reinforces one principle: **models are tools, not truths.** Phase 1 shows the puzzle. Phase 3 shows the model's power. Phase 4 shows the model's limits. Phase 5 shows reality's messiness. By the end of the textbook, you should reflexively ask three questions about any economic claim: *What model are they using? What assumptions does it make? Does the data support it?*
+Most economics courses teach models as facts. The best ones teach models as *lenses* — useful simplifications that reveal some truths and hide others. This repo tries to replicate that second kind of education: every chapter ends with you confronting the model's predictions against messy, real-world data, and deciding for yourself what it gets right and what it misses.
 
-## Built With
+## Part of a Larger System
 
-Study modules generated using a custom [textbook-economics](https://github.com/nikiforosGithub/learning-skills) Claude skill that implements the 5-phase pedagogy for any economics textbook.
+This is one of three textbook repos using domain-specific learning pedagogies:
 
-## License
-
-Educational use. Data sourced from OECD, World Bank, and public datasets.
+| Repo | Domain | Method |
+|---|---|---|
+| **This repo** | Economics | Puzzle → Read → Model → Debate → Data |
+| [stallings-security](https://github.com/USERNAME/stallings-security) | Computer Security | Feel the attack → Read → Build the defense (test suite) |
+| [clrs-algorithms](https://github.com/USERNAME/clrs-algorithms) | Algorithms | Feel the slowness → Read → Build and benchmark |
